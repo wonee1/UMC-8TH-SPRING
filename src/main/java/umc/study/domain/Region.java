@@ -3,6 +3,7 @@ package umc.study.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,5 +21,6 @@ public class Region {
     private String name;
 
     @OneToMany(mappedBy = "region")
-    private List<Store> stores;
+    private List<Store> stores = new ArrayList<>();
+
 }
