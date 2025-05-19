@@ -45,4 +45,16 @@ public class Store extends BaseEntity {
 
     @OneToMany(mappedBy = "store")
     private List<Review> reviews;
+
+    @Override
+    public String toString() {
+        return "Store{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", score=" + avgRating +
+                ", region=" + (region != null ? region.getName() : "null") +
+                '}';
+    }
+
 }
